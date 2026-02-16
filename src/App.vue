@@ -188,10 +188,6 @@ body {
   height: auto;
 }
 
-.el-row {
-  height: 46px
-}
-
 .description {
   color: #606266;
   line-height: 1.8;
