@@ -61,25 +61,25 @@ export default {
       basePower: 200,
       recipes: [
         {
-          index: 1,
+          index: 0,
           label: "低容谷地电池",
           power: 220,
           time: 40
         },
         {
-          index: 2,
+          index: 1,
           label: "中容谷地电池",
           power: 420,
           time: 40
         },
         {
-          index: 3,
+          index: 2,
           label: "高容谷地电池",
           power: 1100,
           time: 40
         },
         {
-          index: 4,
+          index: 3,
           label: "低容武陵电池",
           power: 1600,
           time: 40
@@ -184,7 +184,7 @@ body {
 }
 
 .image-container img {
-  width: 46px;
+  width: 8.3%;
   height: auto;
 }
 
