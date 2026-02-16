@@ -61,12 +61,6 @@ export default {
       basePower: 200,
       recipes: [
         {
-          index: 0,
-          label: "源矿",
-          power: 50,
-          time: 8
-        },
-        {
           index: 1,
           label: "低容谷地电池",
           power: 220,
