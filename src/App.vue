@@ -176,16 +176,18 @@ body {
   font-weight: 600;
 }
 
+.el-row {
+  margin-bottom: -1.5%;
+}
+
 .image-container {
   width: 100%;
   margin-bottom: 24px;
-  border-radius: 8px;
   overflow: hidden;
 }
 
 .image-container img {
   width: 8.3%;
-  height: auto;
 }
 
 .description {
