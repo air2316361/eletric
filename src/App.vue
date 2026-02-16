@@ -5,10 +5,10 @@
       <el-form-item label="选择电池">
         <el-select v-model="form.recipe" style="width: 100%">
           <el-option
-              v-for="item in recipes"
-              :key="item.index"
+              v-for="(item, index) in recipes"
+              :key="index"
               :label="item.label"
-              :value="item.index"/>
+              :value="index"/>
         </el-select>
       </el-form-item>
       <el-form-item label="输入负载">
@@ -61,25 +61,21 @@ export default {
       basePower: 200,
       recipes: [
         {
-          index: 0,
           label: "低容谷地电池",
           power: 220,
           time: 40
         },
         {
-          index: 1,
           label: "中容谷地电池",
           power: 420,
           time: 40
         },
         {
-          index: 2,
           label: "高容谷地电池",
           power: 1100,
           time: 40
         },
         {
-          index: 3,
           label: "低容武陵电池",
           power: 1600,
           time: 40
@@ -99,6 +95,7 @@ export default {
   },
   methods: {
     handleSubmit() {
+      console.log(this.form.recipe);
       let load = this.form.load - this.basePower;
       this.reservoirNum = 0;
       if (load <= 0) {
