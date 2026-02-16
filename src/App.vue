@@ -48,6 +48,7 @@
       <p>总输出功率：{{ totalOutput }}</p>
       <p>冗余：{{ redundancy }}</p>
     </div>
+    <div class="description">请配合蓝图码【EF015i2OI880EuIeioe】食用</div>
   </div>
 </template>
 
