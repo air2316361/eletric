@@ -42,11 +42,15 @@
         <img v-for="item in totalBits" src="./assets/0.png" alt=""/>
       </el-row>
     </div>
+    <template v-if="descType !== 0"></template>
     <div class="description" v-if="reservoirNum > 0">
       <p>此外，您还需要建造【{{ reservoirNum }}】个满载的热能池</p>
       <p>分流器输出功率：{{ output }}</p>
       <p>总输出功率：{{ totalOutput }}</p>
       <p>冗余：{{ redundancy }}</p>
+    </div>
+    <div v-else>
+      <p>您不需要额外建造热能池</p>
     </div>
     <div class="description">请配合蓝图码【EF015i2OI880EuIeioe】食用</div>
   </div>
