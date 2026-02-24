@@ -42,17 +42,13 @@
         <img v-for="item in totalBits" src="./assets/0.png" alt=""/>
       </el-row>
     </div>
-    <template v-if="descType === 2">
-      <div class="description" v-if="reservoirNum > 0">
-        <p>此外，您还需要建造【{{ reservoirNum }}】个满载的热能池</p>
-        <p>分流器输出功率：{{ output }}</p>
-        <p>总输出功率：{{ totalOutput }}</p>
-        <p>冗余：{{ redundancy }}</p>
-      </div>
-      <div class="description" v-else>
-        <p>您不需要额外建造热能池</p>
-      </div>
-    </template>
+    <div class="description" v-if="descType === 2">
+      <p v-if="reservoirNum > 0">此外，您还需要建造【{{ reservoirNum }}】个满载的热能池</p>
+      <p v-else>您不需要额外建造热能池</p>
+      <p>分流器输出功率：{{ output }}</p>
+      <p>总输出功率：{{ totalOutput }}</p>
+      <p>冗余：{{ redundancy }}</p>
+    </div>
     <div class="description">请配合蓝图码【EF015i2OI880EuIeioe】食用</div>
   </div>
 </template>
@@ -122,7 +118,7 @@ export default {
         }
       }
       let currentPower = 0;
-      this.result =  new Array(this.totalBits).fill(0);
+      this.result = new Array(this.totalBits).fill(0);
       for (let i = 0; i < this.totalBits; ++i) {
         const tempPower = currentPower + weights[i];
         if (tempPower <= load) {
